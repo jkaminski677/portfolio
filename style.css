@@ -90,7 +90,6 @@ header {
 
 /* ///////////// przygotowany odnośnik do ABOUT /////////////////// */
 
-
 .aboutclas {
   display: flex;
   display: none;
@@ -135,13 +134,13 @@ header {
 }
 
 .names {
-  width: 500px;
+  width: 700px;
   text-align: center;
   padding: 20px;
 }
 .klik {
   text-align: center;
-  padding: 20px;
+  padding: 20px 20px 0px 20px;
 }
 .projects {
   display: flex;
@@ -170,6 +169,9 @@ header {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  /* justify-content: space-evenly; */
+  /* justify-content: space-beetwen;  /// do uruchomienia kiedy 
+                                          będzie więcej projektów*/
   align-items: flex-start;
   text-align: center;
   width: 100%;
@@ -211,9 +213,10 @@ hr.new1 {
 }
 
 .square1 {
-  max-width: 350px;
-  min-width: 260px;
-  height: 360px;
+  /* max-width: 350px; */
+  min-width: 360px;
+  min-height: 360px;
+  /* height: 360px; */
   margin: 0 20px 20px 20px;
   display: flex;
   flex-direction: column;
@@ -223,7 +226,20 @@ hr.new1 {
   border-radius: 15px;
 }
 
+.square1 img {
+  max-height: 300px;
+  margin: 30px 20px 0 0;
+}
+
+.square1 a {
+  margin: 0 0 20px 0;
+}
+
 @media screen and (max-width: 800px) {
+  .RowsInRows {
+    justify-content: flex-start;
+  }
+
   .rows h2 {
     font-size: 120%;
   }
