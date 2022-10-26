@@ -168,10 +168,11 @@ header {
 .RowsInRows {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  /* justify-content: space-evenly; */
-  /* justify-content: space-beetwen;  /// do uruchomienia kiedy 
-                                          będzie więcej projektów*/
+  flex-wrap: wrap;
+  /* justify-content: flex-start; */
+  justify-content: space-evenly;
+  /* justify-content: space-between;   */
+  /*/// do uruchomienia kiedy będzie więcej projektów*/
   align-items: flex-start;
   text-align: center;
   width: 100%;
@@ -213,9 +214,10 @@ hr.new1 {
 }
 
 .square1 {
-  /* max-width: 350px; */
-  min-width: 360px;
-  min-height: 360px;
+  max-width: 320px;
+  /* max-width: auto; */
+  min-width: 200px;
+  min-height: 300px;
   /* height: 360px; */
   margin: 0 20px 20px 20px;
   display: flex;
@@ -238,6 +240,7 @@ hr.new1 {
 @media screen and (max-width: 800px) {
   .RowsInRows {
     justify-content: flex-start;
+    flex-wrap: nowrap;
   }
 
   .rows h2 {
