@@ -292,6 +292,9 @@ hr.new1 {
     padding: 10px 5px;
     margin: 5px 5px;
   }
+  hr.new1 {  
+    margin-top: 15px;
+  }
 }
 
 .pic1 {
