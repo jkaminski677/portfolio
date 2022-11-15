@@ -375,6 +375,17 @@
   .textButtonIndex {
     margin-right: -70%;
   }
+
+  @keyframes animatebottom {
+    from {
+      margin-top: -300px;
+      opacity: 0;
+    }
+    to {
+      margin-top: 20px;
+      opacity: 1;
+    }
+  }
 }
 
 @media screen and (max-width: 550px) {
@@ -412,7 +423,7 @@
     }
 
     to {
-      margin-top: -70%;
+      margin-top: -60%;
     }
   }
   .undergatesText {
