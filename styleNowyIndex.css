@@ -112,7 +112,7 @@
 
 /* Animation */
 .anim-typewriter {
-  animation: typewriter 1s steps(10) 1s 1 normal both,
+  animation: typewriter 0.5s steps(10) 1s 1 normal both,
     blinkTextCursor 500ms steps(10, end) infinite normal;
 }
 @keyframes typewriter {
@@ -138,7 +138,7 @@
 }
 
 .anim-typewriter2 {
-  animation: typewriter2 1.5s steps(15) 3.5s 1 normal both,
+  animation: typewriter2 1s steps(15) 2s 1 normal both,
     blinkTextCursor 500ms steps(15) infinite normal;
 }
 @keyframes typewriter2 {
@@ -156,7 +156,7 @@
 }
 
 .anim-typewriter3 {
-  animation: typewriter3 2s steps(24) 4.9s 1 normal both,
+  animation: typewriter3 2s steps(24) 2.9s 1 normal both,
     blinkTextCursor 500ms steps(24) infinite normal;
 }
 @keyframes typewriter3 {
@@ -197,7 +197,7 @@
     blinkTextCursor 500ms steps(10) infinite normal;
 }
 .anim-typewriter6 {
-  animation: typewriter6 0.5s steps(34) 14.5s 1 normal both,
+  animation: typewriter6 0.5s steps(39) 14.5s 1 normal both,
     blinkTextCursor 500ms steps(10) infinite normal;
 }
 .anim-typewriter7 {
@@ -227,7 +227,7 @@
     width: 0;
   }
   to {
-    width: 7em;
+    width: 8em;
   }
 }
 

@@ -30,6 +30,23 @@
 // typeWriter();
 
 
+  document.addEventListener("DOMContentLoaded", function() {
+    const dataUrodzenia = new Date(1999, 0, 1);
+
+    function obliczWiek(dataUrodzenia) {
+      const dzisiaj = new Date();
+      let wiek = dzisiaj.getFullYear() - dataUrodzenia.getFullYear();
+      const m = dzisiaj.getMonth() - dataUrodzenia.getMonth();
+      if (m < 0 || (m === 0 && dzisiaj.getDate() < dataUrodzenia.getDate())) {
+        wiek--;
+      }
+      return wiek;
+    }
+
+    document.getElementById("wiek").textContent = obliczWiek(dataUrodzenia);
+  });
+
+
 // const secondHand = document.getElementById('second-hand');
 const minsHand = document.getElementById('min-hand');
 const hourHand = document.getElementById('hour-hand');
@@ -55,3 +72,5 @@ function setDate() {
 setInterval(setDate, 1000);
 
 setDate();
+
+

@@ -203,6 +203,52 @@ header {
   height: 110px;
 }
 
+/* icons styles */
+
+.tools {
+  position: absolute;
+  top: 110%;
+  left: 20%;
+  transform: rotate(30deg);
+  background-image: url("/img/toolIcon.png");
+  height: 100px;
+  width: 100px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.plug {
+  position: absolute;
+  top: 80vh;
+  right: 15%;
+  transform: rotate(10deg);
+  background-image: url("/img/plugIcon.png");
+  height: 150px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+.webIcon {
+  position: absolute;
+  top: 20%;
+  right: 10%;
+  transform: rotate(10deg);
+  background-image: url("/img/WebIcon.png");
+  height: 150px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  opacity: 0.3;
+}
+
+
+
 /* ///////////////////////// END OF ZEGAREK //////////////////////// */
 /* styleClock.css */
 /* ///////////////////////// END OF ZEGAREK //////////////////////// */
@@ -484,6 +530,10 @@ button:hover {
   transition: 0.3s;
 }
 
+.roboBal .photo11 {
+  max-width: 30%;
+}
+
 .photo11 img {
   width: 100%;
   border-radius: 0 30px;
@@ -494,7 +544,7 @@ button:hover {
 }
 
 .photo11:active {
-  transform: scale(1.5);
+  transform: scale(1.3);
 }
 
 .part3 {
