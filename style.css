@@ -210,7 +210,7 @@ header {
   top: 110%;
   left: 20%;
   transform: rotate(30deg);
-  background-image: url("/img/toolIcon.png");
+  background-image: url("./img/toolIcon.png");
   height: 100px;
   width: 100px;
   background-repeat: no-repeat;
@@ -224,7 +224,7 @@ header {
   top: 80vh;
   right: 15%;
   transform: rotate(10deg);
-  background-image: url("/img/plugIcon.png");
+  background-image: url("./img/plugIcon.png");
   height: 150px;
   width: 150px;
   background-repeat: no-repeat;
@@ -238,7 +238,7 @@ header {
   top: 20%;
   right: 10%;
   transform: rotate(10deg);
-  background-image: url("/img/WebIcon.png");
+  background-image: url("./img/WebIcon.png");
   height: 150px;
   width: 150px;
   background-repeat: no-repeat;
