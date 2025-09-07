@@ -21,6 +21,30 @@
   margin: 0;
   height: auto;
 } */
+ 
+/* mixins */
+/* /////////////////////////////////////// */
+.flex-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.mixin-clampLines(@lineLimit) {
+    -webkit-line-clamp: @lineLimit;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: normal;
+}
+
+/* ////////////////////////////////// */
+
+html {
+  scroll-behavior: smooth;
+}
+
 
 body {
   /* overflow: hidden; */
@@ -163,18 +187,165 @@ header {
 }
 
 .names {
-  width: 700px;
-  text-align: center;
+  width: 100%;
   padding: 20px;
+  display: grid;
+  grid-template-rows: repeat(4, max-content);
+  grid-template-columns: 1fr repeat(3, 30%) 1fr;
+  grid-template-areas:
+    // "clock clock first first first ."
+    // ". html-text html-text IconWeb . ."
+    // ". . IconPython python-text python-text ."
+    // ". electric-text electric-text IconTool . ."
+    // "last last last last last last";
+    "clock clock first first first"
+    ". html-text html-text IconWeb ."
+    ". IconPython python-text python-text ."
+    ". electric-text electric-text IconTool ."
+    "last last last last last";
+
+  row-gap: 60px;
+  justify-content: center;
+  align-items: center;
 }
 
-.names a {
-  text-decoration: none;
-  color: black;
+.names .end-text {
+  a {
+    text-decoration: none;
+    color: black;
+
+    &:hover {
+      opacity: 0.5;
+    }
+  }
 }
 
-.names .grubo a:hover {
-  opacity: 0.5;
+.names {
+  .text-div {
+    border: 2px dashed var(--border-color-dashed);
+    border-radius: 15px;
+    transition: 0.2s;
+    padding: 30px;
+    max-width: 400px;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-self: center;
+    line-height: 1.3;
+    letter-spacing: 1.2px;
+
+    &:hover {
+      transform: scale(1.03);
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  .main-Icon {
+    justify-self: center;
+  }
+
+  .first-text {
+    grid-area: first;
+    text-align: center;
+    line-height: 1.3;
+    letter-spacing: 1.2px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .Clock-div {
+    grid-area: clock;
+    .flex-center();
+  }
+
+  .html-text {
+    grid-area: html-text;
+  }
+
+  .tools {
+    grid-area: IconTool;
+  }
+
+  .webIcon {
+    grid-area: IconWeb;
+  }
+
+  .pythonIcon {
+    grid-area: IconPython;
+  }
+
+  .python-text {
+    grid-area: python-text;
+  }
+
+  .electric-text {
+    grid-area: electric-text;
+  }
+
+  .end-text {
+    grid-area: last;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+} 
+
+@media screen and (max-width: 800px) { 
+  .names {
+    grid-template-rows: repeat(9, max-content);
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "first"
+      "IconWeb"
+      "html-text"
+      "IconPython"
+      "python-text"
+      "IconTool"
+      "electric-text"
+      "last";
+
+    row-gap: 40px;
+    justify-content: center;
+    align-items: center;
+
+    .main-Icon {
+      width: 80px;
+      height: 80px;
+    }
+
+    .Clock-div {
+      position: absolute;
+      top: 100px;
+      left: 100px;
+      transform: scale(0.8);
+    }
+  }  
+}
+
+@media screen and (max-width: 800px) { 
+  .names {
+    .Clock-div {
+      width: min-content;
+      top: 100px;
+      left: 70px;
+      transform: scale(0.8);
+    }
+  }
+}
+
+@media screen and (max-width: 550px) { 
+  .names {
+    .Clock-div {
+      width: min-content;
+      top: 60px;
+      right: 40px;
+      left: unset;
+      transform: scale(0.5);
+    }
+  }
 }
 
 #Check_more span#a {
@@ -206,23 +377,23 @@ header {
 /* icons styles */
 
 .tools {
-  position: absolute;
+  /* position: absolute;
   top: 110%;
-  left: 20%;
+  left: 20%; */
   transform: rotate(30deg);
   background-image: url("./img/toolIcon.png");
-  height: 100px;
-  width: 100px;
+  height: 150px;
+  width: 150px;
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
-  opacity: 0.3;
+  // opacity: 0.5;
 }
 
 .plug {
-  position: absolute;
+  /* position: absolute;
   top: 80vh;
-  right: 15%;
+  right: 15%; */
   transform: rotate(10deg);
   background-image: url("./img/plugIcon.png");
   height: 150px;
@@ -230,13 +401,13 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
-  opacity: 0.3;
+  // opacity: 0.5;
 }
 
 .webIcon {
-  position: absolute;
+  /* position: absolute;
   top: 20%;
-  right: 10%;
+  right: 10%; */
   transform: rotate(10deg);
   background-image: url("./img/WebIcon.png");
   height: 150px;
@@ -244,7 +415,21 @@ header {
   background-repeat: no-repeat;
   background-size: contain;
   z-index: -1;
-  opacity: 0.3;
+  // opacity: 0.5;
+}
+
+.pythonIcon {
+  /* position: absolute;
+  top: 20%;
+  right: 50%; */
+  transform: rotate(10deg);
+  background-image: url("./img/PythonIcon.png");
+  height: 150px;
+  width: 150px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: -1;
+  // opacity: 0.5;
 }
 
 
@@ -603,20 +788,9 @@ button:hover {
     right: 40px;
     margin: 6.5% 1% 0 0;
   }
-  .names {
-    width: 500px;
-    text-align: center;
-    padding: 20px;
-  }
 }
 
 @media screen and (max-width: 1130px) {
-  .names {
-    width: 300px;
-    text-align: center;
-    padding: 20px;
-  }
-
   .Check_more_Class {
     width: 300px;
   }
@@ -642,6 +816,18 @@ button:hover {
   }
   .square1 {
     margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .descrip h1{
+    margin-top: 50px;
+  }
+
+  .exit-to-index {
+    left: 20px;
+    top: 5px;
+    margin: 6.5% 0 0 0;
   }
 }
 

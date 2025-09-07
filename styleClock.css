@@ -144,6 +144,12 @@
 
 /* ////////////////////////// SECOND ZEGAREK //////////////////////// */
 
+.Clock-div {
+  /* position: absolute;
+  top: 20px;
+  left: 20px; */
+}
+
 .rightClock {
   background: #b1b1b1;
   width: 171px;
@@ -298,11 +304,5 @@
 
   .inner-clock-faceRight2 {
     border: 3px solid #282828;
-  }
-}
-
-@media screen and (max-width: 720px) {
-  .clock {
-    display: none;
   }
 }

@@ -15,9 +15,10 @@
       strony interntetowe, budowanie stron internetowych, strony internetowe Wordpress"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet/less" type="text/css" href="style.less" />
     <link rel="stylesheet" href="styleClock.css" />
     <link rel="icon" href="img/Białe Okrąg z Przyborami Kuchennymi Restauracja Logo1/1.png" type="image/png">
+    <script src="https://cdn.jsdelivr.net/npm/less@4"></script>
 
   </head>
   <body>
@@ -58,33 +59,21 @@
 
       <div class="content">
         <div class="HeadPart">
-          <div class="rightClock">
-            <div class="rama"></div>
-            <div class="inner-clock-faceRight" id="hour-hand">
-              <div class="handRight hour-handRight">
-                <div class="handRight min-handRight"></div>
-              </div>
-            </div>
-            <div class="inner-clock-faceRight2" id="min-hand">
-              <div class="handRight hour-handRight2">
-                <div class="handRight min-handRight2"></div>
-              </div>
-            </div>
-            <div class="hand second-hand animate" id="second-hand"></div>
-          </div>
+          
           <div class="names">
-            <h1>Witaj!</h1>
-            <p>nazywam się</p>
-            <h1>Jan Kamiński</h1>
-            <p>
+            <div class="first-text">
+              <h1>Witaj!</h1>
+              <p>nazywam się</p>
+              <h1>Jan Kamiński</h1>
               Mam <span id="wiek"></span> lat. Ukończyłem studia I stopnia na Politechnice Śląskiej
               <br />
-              na kierunku Automatya i Robotyka na wydziale Automatyki,
-              Elektorniki i Informatyki <br />
-              oraz II stopnia na kierunku <br />
-              Informatyka.
-              <br />
-              <br />
+              na kierunku Automatya i Robotyka <br />
+              oraz II stopnia na kierunku Informatyka  <br />
+              na wydziale Automatyki,
+              Elektorniki i Informatyki.
+               <br />
+              
+            </div> 
               <!-- <a id="Check_more" href="whyWeb.html"
                 ><button class="Check_more_Class">
                   <h3>
@@ -95,29 +84,72 @@
                   </h3>
                 </button>
               </a> -->
-              <br />
 
+            <div class="Clock-div">
+              <div class="rightClock">
+                <div class="rama"></div>
+                <div class="inner-clock-faceRight" id="hour-hand">
+                  <div class="handRight hour-handRight">
+                    <div class="handRight min-handRight"></div>
+                  </div>
+                </div>
+                <div class="inner-clock-faceRight2" id="min-hand">
+                  <div class="handRight hour-handRight2">
+                    <div class="handRight min-handRight2"></div>
+                  </div>
+                </div>
+                <div class="hand second-hand animate" id="second-hand"></div>
+              </div>
+            </div>
+             
+            <a class="html-text text-div" href="#webowka"> 
+              <h2>Webówka</h2>
               Przez rok pracowałem jako Front-End Developer, gdzie
               zajmowałem się tworzeniem i rozwijaniem stron internetowych dla klientów z
               rynku amerykańskiego. Moja praca koncentruje się na implementacji
-              responsywnych interfejsów użytkownika z wykorzystaniem technologii
-              <strong>HTML</strong>, <strong>CSS</strong> oraz
-              <strong>JavaScript</strong>. Odpowiadam za optymalizację kodu, dbając o
-              szybkość działania serwisów oraz zgodność z nowoczesnymi standardami
-              sieciowymi. Ściśle współpracuję z zespołem projektowym, aby zapewniać
-              wysoką jakość oraz spójność wizualną realizowanych rozwiązań.
+              responsywnych interfejsów użytkownika z wykorzystaniem technologii:
+              <ul>
+                <li><strong>HTML</strong></li>
+                <li><strong>CSS</strong></li>
+                <li><strong>JavaScript</strong></li>
+              </ul>
+              Ściśle współpracuję z zespołem projektowym, aby opierając się na designach z Figmy zapewniać
+              wysoką jakość oraz spójność wizualną realizowanych rozwiązań (PixelPerfect).
+            </a> 
 
-              <br />
-              <br />
-              <span class="tools"></span>
-              <span class="plug"></span>
-              <span class="webIcon"></span>
+            <span class="tools main-Icon"></span>
+            <!-- <span class="plug"></span> -->
+            <span class="webIcon main-Icon"></span>
+            <span class="pythonIcon main-Icon"></span>
 
-              Dodatkowo nie jest mi obce majsterkowanie i podstawy elektryki - mam praktyczne doświadczenie 
-              w drobnych pracach instalacyjnych oraz w montażu i konfiguracji systemów Smart Home, 
+            <a class="python-text text-div" href="#pythonowa">
+              <h2>Python & Machine Learning</h2>
+              Mam doświadczenie w pracy z Pythonem, które obejmuje zarówno mniejsze projekty praktyczne, 
+              jak i bardziej zaawansowane badania akademickie. Tworzyłem m.in. narzędzie do konwersji plików JSON → CSV 
+              oraz program do detekcji ruchu realizowany w ramach projektu PBL na studiach, gdzie korzystałem z 
+              bibliotek takich jak:
+              <ul>
+                <li><strong>NumPy</strong></li>
+                <li><strong>Pandas</strong></li>
+                <li><strong>Matplotlib</strong></li>
+              </ul>
+              Ważnym elementem mojego rozwoju była również praca magisterska, 
+              której celem było porównanie wydajności modeli detekcji obiektów (<strong>YOLOv7, RetinaNet, Mask R-CNN</strong>) z wykorzystaniem 
+              frameworka MMDetection. Projekty te pozwoliły mi połączyć umiejętności programistyczne z <strong>analizą danych</strong>, 
+              przetwarzaniem obrazów i pracą z nowoczesnymi <strong>modelami uczenia maszynowego</strong>.
+            </a>
+
+            <a class="electric-text text-div" href="#elektro">
+              <h2>Elektryk</h2>
+              W trakcie studiów opracowałem dwa innowacyjne projekty oparte na platformie <strong>Arduino</strong>, które pozwoliły mi 
+              praktycznie zastosować zdobytą wiedzę z elektroniki i programowania. Ponadto, w ramach pracy inżynierskiej 
+              zaprojektowałem i zaimplementowałem robota balansującego, wykorzystując zaawansowany <strong>regulator PID</strong>, co umożliwiło 
+              precyzyjne sterowanie jego równowagą i ruchami. Nie jest mi obce majsterkowanie i podstawy elektryki. 
+              Mam praktyczne doświadczenie w drobnych pracach instalacyjnych oraz w montażu i konfiguracji systemów <strong>Smart Home</strong>, 
               co pozwoliło mi rozwinąć zdolności manualne, precyzję i umiejętność pracy z narzędziami.
-              <br />
-              <br />
+            </a>
+
+            <div class="end-text">
               Poniżej kilka moich projektów z początków nauki ;)
               <br />
               Zapraszam do kontaktu.
@@ -136,10 +168,10 @@
                   jkaminski677@gmail.com</a
                 ></span
               >
-            </p>
+            </div>
           </div>
 
-          <div class="clock">
+          <!-- <div class="clock"> -->
             <!-- <div class="outer-clock-face"> -->
             <!-- <div class="marking marking-one"></div>
             <div class="marking marking-two"></div>
@@ -151,14 +183,14 @@
               <div class="hand second-hand" id="second-hand"></div>
             </div> -->
             <!-- </div> -->
-          </div>
+          <!-- </div> -->
         </div>
 
         <div class="klik">
           <p>Kliknij w jeden z linków aby zobaczyć wybrany projekt.</p>
         </div>
         <div class="projects">
-          <div class="rows">
+          <div class="rows" id="webowka">
             <h2>Strony internetowe (HTML, CSS, JS, Wordpress, Mobirise)</h2>
             <hr class="new1" />
             <div class="RowsInRows">
@@ -223,7 +255,7 @@
                   ><button>Zobacz</button></a
                 >
               </div>
-              
+
               <!-- <div class="square1">
                 <div class="pic1">
                   <a
@@ -318,17 +350,10 @@
             </div>
           </div>
 
-          <div class="rows">
-            <h2>Programy i projekty wykonane na studiach</h2>
+          <div class="rows" id="pythonowa">
+            <h2>Programy i projekty Python wykonane na studiach</h2>
             <hr class="new1" />
             <div class="RowsInRows">
-              <div class="square1">
-                <div class="pic1">
-                  <a href="/robotBal.html"><img src="./img/2.png" /></a>
-                </div>
-                <h4 class="text-width">Robot balansujący</h4>
-                <a href="/robotBal.html"><button>Zobacz</button></a>
-              </div>
               <div class="square1">
                 <div class="pic1">
                   <a href="./jsontocsv.html"><img src="./img/stres1m.png" /></a>
@@ -344,6 +369,20 @@
                 </div>
                 <h4 class="text-width">Program do analizowania ruchów ciała</h4>
                 <a href="movedetecting.html"><button>Zobacz</button></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="rows" id="elektro">
+            <h2>Projekty Arduino wykonane na studiach</h2>
+            <hr class="new1" />
+            <div class="RowsInRows">
+              <div class="square1">
+                <div class="pic1">
+                  <a href="/robotBal.html"><img src="./img/2.png" /></a>
+                </div>
+                <h4 class="text-width">Robot balansujący</h4>
+                <a href="/robotBal.html"><button>Zobacz</button></a>
               </div>
             </div>
           </div>
