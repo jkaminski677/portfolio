@@ -63,6 +63,11 @@ body {
   margin: 0;
   height: auto;
   color: var(--tekt-color);
+
+  p {
+    line-height: 1.3;
+    letter-spacing: 1.2px;
+  }
 }
 
 @keyframes gradient {
@@ -226,7 +231,7 @@ header {
     border-radius: 15px;
     transition: 0.2s;
     padding: 30px;
-    max-width: 400px;
+    max-width: 700px;
     margin-left: 20px;
     margin-right: 20px;
     justify-self: center;
@@ -635,6 +640,17 @@ button:hover {
   width: 500px;
 }
 
+@media screen and (max-width: 800px) {
+  .part1 {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      width: 100%;
+    }
+  }
+}
+
 .part4 {
   display: flex;
   flex-direction: row-reverse;
@@ -646,6 +662,17 @@ button:hover {
 .part4 p {
   margin: 60px;
   width: 500px;
+}
+
+@media screen and (max-width: 800px) {
+  .part4 {
+    display: flex;
+    flex-direction: column;
+
+    p {
+      width: 100%;
+    }
+  }
 }
 
 .photo {
@@ -681,15 +708,19 @@ button:hover {
   width: 50%;
 }
 
+@media screen and (max-width: 800px) {
+  .part2 {
+    p {
+      width: 100%;
+    }
+  }
+}
+
 .photo1 {
   display: flex;
   flex-direction: row;
   width: 100%;
 }
-
-/* .photo1:active {
-  transform: scale(1.5);
-} */
 
 .photo1 img {
   width: 100%;
@@ -706,8 +737,15 @@ button:hover {
   transform: scale(1.5);
 }
 
-.photo_second {
-  padding: 50px;
+@media screen and (max-width: 800px) {
+  .photo1 {
+    flex-direction: column;
+
+    img {
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
 }
 
 .photo11 {
@@ -732,6 +770,26 @@ button:hover {
   transform: scale(1.3);
 }
 
+@media screen and (max-width: 800px) {
+  .part1 {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .photo {
+    width: 100%;
+  }
+
+  .roboBal .photo11 {
+    max-width: 100%;
+  }
+
+  .photo11 {
+    max-width: 100%;
+  }
+
+}
+
 .part3 {
   display: flex;
   flex-direction: column;
@@ -744,6 +802,17 @@ button:hover {
 
 .part3 img {
   max-width: 500px;
+}
+
+@media screen and (max-width: 800px) {
+  .part3 {
+    max-width: 100%;
+    width: unset;
+
+    p {
+      width: 100%;
+    }
+  }
 }
 
 .youtubelinkdostrony {
@@ -760,7 +829,7 @@ button:hover {
 
 .exit-to-index {
   position: absolute;
-  left: 40px;
+  left: 60px;
   margin: 20px 0 0 0;
   transition: 0.4s;
   width: 40px;
@@ -819,7 +888,7 @@ button:hover {
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   .descrip h1{
     margin-top: 50px;
   }

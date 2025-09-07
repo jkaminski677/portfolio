@@ -1,0 +1,74 @@
+<!DOCTYPE html!>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Portfolio Jan Kamiński - Robot Balansujący</title>
+    <meta
+      name="description"
+      content="Robot balansujący na płytce Arduino."
+    />
+    <meta
+      name="keywords"
+      content="Arduino, Robot, silnik"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.less" />
+    <link rel="icon" href="img/Białe Okrąg z Przyborami Kuchennymi Restauracja Logo1/1.png" type="image/png">
+
+    <script src="myscript.js"></script>
+  </head>
+  <body>
+    <div class="page">
+      <a href="mainpage.html">
+        <span class="exit-to-index" alt="Wyjście do strony głównej"></span>
+      </a>
+
+      <!-- <img
+          class="exit-to-index"
+          src="img/x-circle.svg"
+          alt="Wyjście do strony głównej"
+        /> -->
+      <div class="content content2 roboBal">
+        <div class="descrip">
+          <h1>Praca Magisterska</h1>
+          <p>
+            Celem mojej pracy magisterskiej jest porównanie wydajności czterech różnych 
+            modeli detekcji obiektów w obrazach: YOLOv7, RetinaNet oraz Mask R-CNN z 
+            wykorzystaniem MMDetection, w zakresie analizy i detekcji obiektów na zdjęciach.
+
+          </p>
+        </div>
+        <div class="part1">
+          <p>
+            W pracy magisterskiej porównano trzy popularne modele detekcji obiektów w obrazach: YOLOv7, 
+            RetinaNet oraz Mask R-CNN, implementowane przy użyciu frameworka MMDetection. Każdy z tych 
+            modeli reprezentuje inne podejście do detekcji - YOLOv7 to bardzo szybki i dokładny model 
+            jednokrokowy, RetinaNet wykorzystuje sieć piramid cech (FPN) oraz funkcję strat Focal Loss, 
+            co pozwala mu skutecznie wykrywać także małe obiekty, natomiast Mask R-CNN, jako model dwustopniowy, 
+            umożliwia nie tylko wykrywanie obiektów, 
+            ale również segmentację instancji, czyli wyodrębnianie ich kształtu na poziomie pikseli.
+          </p>
+          <div class="photo11"><img src="./img/ML/ML5.png" alt="" /></div>
+        </div>
+        <div class="part4">
+          <p>
+            Do przeprowadzenia badań wykorzystano zestaw danych COCO (Common Objects in Context), który zawiera ponad 330 
+            tysięcy zdjęć przedstawiających obiekty w różnych warunkach i kontekstach. Zbiór ten uchodzi za jeden z najbardziej 
+            wymagających benchmarków w dziedzinie detekcji obiektów, ponieważ obejmuje dużą różnorodność klas, perspektyw, warunków oświetleniowych i tła. 
+            Dzięki temu umożliwia kompleksową i rzetelną ocenę działania testowanych modeli w zróżnicowanych scenariuszach.
+          </p>
+          <div class="photo11"><img src="./img/ML/ML3.png" alt="" /></div>
+        </div>
+        <div class="part1">
+          <p>
+            Wyniki badań pokazały, że wszystkie analizowane modele mają swoje mocne strony i ograniczenia. 
+            YOLOv7 wyróżniał się najlepszym kompromisem pomiędzy dokładnością a szybkością, co sprawia, że 
+            nadaje się do systemów czasu rzeczywistego. RetinaNet osiągał bardzo dobre rezultaty w detekcji 
+            małych i licznych obiektów, natomiast Mask R-CNN, choć wolniejszy, oferował najwyższą precyzję w segmentacji instancji. 
+            Podsumowując, wybór modelu zależy od specyfiki zastosowania - od wymagań dotyczących szybkości po potrzebę bardzo dokładnej analizy obrazu.
+          </p>
+          <div class="photo11"><img src="./img/ML/ML2.png" /></div>
+        </div>
+    </div>
+  </body>
+</html>
